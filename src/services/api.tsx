@@ -19,7 +19,11 @@ const FetchCurrencies: React.FC = () => {
     useEffect(() => {
         const fetchCurrencies = async () => {
             try {
-                const response = await axios.get<Currencies>('https://data.fixer.io/api/symbols');
+                const response = await axios.get<Currencies>('https://data.fixer.io/api/symbols', {
+                    params: {
+                        access_key: "c0424cf377abc0453869c61908752eaa",
+                    }
+                });
                 setCurrencies(response.data);
             } catch (error: unknown) {
                 if (error instanceof Error){
@@ -36,7 +40,14 @@ const FetchCurrencies: React.FC = () => {
     return (
         <div>
             <ul>
-                {}
+                {currencies && currencies.success ? (
+                    Object.entries(currencies.symbols).map(([code, name]) => (
+                        <li key={code}>
+                            {code}: {name}
+                        </li>
+                    ))) : (
+                        <li>No currencies found.</li>
+                    )}
             </ul>
         </div>
     )
