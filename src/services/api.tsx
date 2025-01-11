@@ -21,16 +21,18 @@ const FetchCurrencies: React.FC = () => {
             try {
                 const response = await axios.get<Currencies>('https://data.fixer.io/api/symbols', {
                     params: {
-                        access_key: "c0424cf377abc0453869c61908752eaa",
+                        access_key: import.meta.env.VITE_API_KEY,
                     }
                 });
                 setCurrencies(response.data);
+                setLoading(false);
             } catch (error: unknown) {
                 if (error instanceof Error){
                 setError(error.message)
                 }
+                setLoading(false);
             } finally {
-                console.log('call to currencies API');
+                console.table('call to currencies API');
             }
         };
         
