@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <div>
-        <MyComponent title='mój tytuł'></MyComponent>
+        <MyComponent title='Welcome in the Currency Dashboard'></MyComponent>
         <Table price={98000}></Table>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
