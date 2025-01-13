@@ -5,6 +5,8 @@ import './App.css'
 import MyComponent from './components/MyComponent'
 import Table from './components/Table'
 import Footer from './components/Footer'
+import TextField from '@mui/material/TextField'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -30,6 +32,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
+      <TextField id="outlined-basic" label="Enter currency" variant="standard" />
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
