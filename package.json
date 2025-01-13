@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "pre-commit": "npm --prefix template run pre-commit && prettier --write src",
+    "pre-commit": "npm --prefix run pre-commit && prettier --write src",
     "prepare": "husky"
   },
   "dependencies": {
