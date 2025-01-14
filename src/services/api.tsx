@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { CircleLoader } from "react-spinners";
 
 type Currencies = {
   success: boolean;
@@ -36,6 +37,7 @@ const FetchCurrencies: React.FC = () => {
       } finally {
         console.table("call to currencies API");
       }
+      <CircleLoader loading={loading}></CircleLoader>;
     };
 
     fetchCurrencies();
