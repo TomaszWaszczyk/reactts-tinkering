@@ -41,7 +41,7 @@ const FetchCurrencies: React.FC = () => {
     };
 
     fetchCurrencies();
-  }, []);
+  }, [loading]);
 
   return (
     <div>
