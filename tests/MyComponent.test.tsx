@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import MyComponent from "../src/components/MyComponent";
+import App from "../src/App"
 
 test("renders button with label", () => {
-  render(<MyComponent title="Test Title" />);
+  render(<App/>);
   // expect(screen.getByText('Click Me')).toBeInTheDocument();
 });
