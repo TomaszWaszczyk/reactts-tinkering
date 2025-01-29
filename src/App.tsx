@@ -6,6 +6,7 @@ import MyComponent from "./components/MyComponent";
 import Table from "./components/Table";
 import Footer from "./components/Footer";
 import TextField from "@mui/material/TextField";
+import HeavyComponent from "./components/HeavyComponent";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
       <div>
+        <HeavyComponent />
         <MyComponent title="Welcome in the Currency Dashboard"></MyComponent>
         <Table price={98000}></Table>
         <a href="https://vite.dev" target="_blank">
