@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const isPrime = (num: number): boolean => {
   if (num <= 1) return false;
