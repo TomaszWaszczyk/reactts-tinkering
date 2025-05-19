@@ -15,6 +15,7 @@ function Countdown({ initialCount = 10 }: { initialCount?: number }) {
   return (
     <div>
       <h1>Countdown: {count}</h1>
+      <button onClick={() => setCount(initialCount)}>RESTART</button>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import Table from "./components/Table";
 import Footer from "./components/Footer";
 import TextField from "@mui/material/TextField";
 import HeavyComponent from "./components/HeavyComponent";
+import Countdown from "./components/Countdown";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -38,6 +39,7 @@ function App() {
         label="Enter currency"
         variant="standard"
       />
+      <Countdown initialCount={10} />
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
