@@ -8,6 +8,8 @@ import Footer from "./components/Footer";
 import TextField from "@mui/material/TextField";
 import HeavyComponent from "./components/HeavyComponent";
 import Countdown from "./components/Countdown";
+import { Counter } from "./components/Counter";
+import IncrementDecrementBtn from "./components/IncrementDecrementBtn";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,6 +17,8 @@ function App() {
   return (
     <>
       <div>
+        <IncrementDecrementBtn/>
+        <Counter initialCount={5} />
         <HeavyComponent />
         <MyComponent title="Welcome in the Currency Dashboard"></MyComponent>
         <Table price={98000}></Table>
