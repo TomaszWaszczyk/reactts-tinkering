@@ -1,8 +1,8 @@
 import react from 'react';
 import { useEffect, useState } from 'react';
 
-function IncrementDecrementBtn() {
-    const [count, setCount] = useState(0);
+function IncrementDecrementBtn( {initialCount = 100}) {
+    const [count, setCount] = useState(initialCount);
 
     const increment = () => {
         setCount((prevCount) => prevCount + 1);
@@ -12,6 +12,18 @@ function IncrementDecrementBtn() {
         setCount((prevCount) => prevCount - 1);
     }
 
+    useEffect(() => {
+        // let data;
+        fetch('https://dog.ceo/api/breeds/image/random/3')
+            .then(response => {
+                if(!response.ok){
+                    throw new Error('');
+                }
+                // data = response;
+                return response.json();
+            })
+
+        }, [])
 
     return (
         <div>

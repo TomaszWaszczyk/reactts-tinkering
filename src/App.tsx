@@ -10,6 +10,7 @@ import HeavyComponent from "./components/HeavyComponent";
 import Countdown from "./components/Countdown";
 import { Counter } from "./components/Counter";
 import IncrementDecrementBtn from "./components/IncrementDecrementBtn";
+import If from "./components/If";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <div>
+        <If></If>
         <IncrementDecrementBtn/>
         <Counter initialCount={5} />
         <HeavyComponent />
