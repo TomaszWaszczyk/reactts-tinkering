@@ -11,6 +11,7 @@ import Countdown from "./components/Countdown";
 import { Counter } from "./components/Counter";
 import IncrementDecrementBtn from "./components/IncrementDecrementBtn";
 import If from "./components/If";
+import UseRef from "./components/UseRef";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,6 +19,7 @@ function App() {
   return (
     <>
       <div>
+        <UseRef />
         <If></If>
         <IncrementDecrementBtn/>
         <Counter initialCount={5} />
