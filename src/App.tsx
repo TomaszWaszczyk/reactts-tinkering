@@ -12,6 +12,7 @@ import { Counter } from "./components/Counter";
 import IncrementDecrementBtn from "./components/IncrementDecrementBtn";
 import If from "./components/If";
 import UseRef from "./components/UseRef";
+import UseEffectEventExample from "./components/UseEffectEventExample";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,9 +20,10 @@ function App() {
   return (
     <>
       <div>
+        <UseEffectEventExample />
         <UseRef />
         <If></If>
-        <IncrementDecrementBtn/>
+        <IncrementDecrementBtn />
         <Counter initialCount={5} />
         <HeavyComponent />
         <MyComponent title="Welcome in the Currency Dashboard"></MyComponent>
