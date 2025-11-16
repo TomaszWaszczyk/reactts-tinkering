@@ -13,6 +13,7 @@ import IncrementDecrementBtn from "./components/IncrementDecrementBtn";
 import If from "./components/If";
 import UseRef from "./components/UseRef";
 import UseEffectEventExample from "./components/UseEffectEventExample";
+import Signal from "./components/Signal";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,6 +21,7 @@ function App() {
   return (
     <>
       <div>
+        <Signal />
         <UseEffectEventExample />
         <UseRef />
         <If></If>
